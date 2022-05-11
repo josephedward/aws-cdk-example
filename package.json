@@ -12,8 +12,8 @@
     "deps:api": "cd api && npm install",
     "deps:layers": "cd layers/nodejs && npm install",
     "deps": "npm run deps:api && npm run deps:layers",
-    "api:build": "cd api && npm run build",
-    "deploy": "npm run api:build && cdk deploy"
+    "bootstrap": "cdk bootstrap && cd api && npm run build",
+    "deploy": "npm run bootstrap && cdk deploy"
   },
   "devDependencies": {
     "@types/jest": "^27.5.0",
