@@ -18,7 +18,7 @@ export class NestCdkLambdaStack extends Stack {
     const apiLambda = new lambda.Function(this, 'nest-api-lambda', {
       runtime: lambda.Runtime.NODEJS_14_X,
       code: lambda.Code.fromAsset('api/dist'),
-      handler: 'main.api',
+      handler: 'main.bootstrap',
       layers: [nodeLayer],
       environment: {
         NODE_PATH: "$NODE_PATH:/opt",

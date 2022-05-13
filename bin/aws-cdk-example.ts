@@ -3,10 +3,10 @@ import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { NestCdkLambdaStack } from '../lib/nest-cdk-lambda-stack';
 import { AwsCdkExampleStack } from '../lib/aws-cdk-example-stack';
-import { OpenApiService } from '../lib/openapi-service';
+
 
 const app = new cdk.App();
-new AwsCdkExampleStack(app, 'AwsCdkExampleStack', {
+new NestCdkLambdaStack(app, 'NestCdkLambdaStack', {
   env: {
     region: process.env.CDK_DEFAULT_REGION,
     account: process.env.CDK_DEFAULT_ACCOUNT,
