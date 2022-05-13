@@ -10,7 +10,7 @@ export class OpenApiService extends Construct {
     super(scope, id);
 
     const api = new apigateway.SpecRestApi(this, "open-api", {
-      apiDefinition: apigateway.ApiDefinition.fromAsset("./helloworld.yaml"),
+      apiDefinition: apigateway.ApiDefinition.fromAsset("./example.json"),
     });
 
   }
